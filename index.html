@@ -25,83 +25,83 @@
       <div class="calc-screen">
         <div class="current-input">
         </div>
-        <div class="all-input">
+        <div id='display' class="all-input">
         </div>
       </div>
     </div>
 
     
     <div class="top-btns">
-        <div class="ac-btn btn">
+        <a href="#" onclick="allClear();"><div class="ac-btn btn">
           <span>AC</span>
-        </div>
-        <div class="ce-btn btn">
+          </div></a>
+        <a href="#" onclick="clear();"><div id = 'ce' class="ce-btn btn">
           <span>CE</span>
-        </div>
-        <div class="div-btn btn">
+        </div></a>
+        <a href="#" onclick="divide();"><div id = ''class="div-btn btn">
           <span>÷</span>
-        </div>
-        <div class="mult-btn btn">
+        </div></a>
+        <a href="#" onclick="multiply();"><div id = '' class="mult-btn btn">
           <span>X</span>
-        </div>
+        </div></a>
       </div>
     
    
       <div class="other-btns">
         <div class="left-two-rows">
           <div class="seveneight">
-            <div class="seven-btn btn">
+            <a href="#" onclick="seven();"><div id = '' class="seven-btn btn">
               <span>7</span>
-            </div>
-            <div class="eight-btn btn">
+            </div></a>
+            <a href="#" onclick="eight();"><div id = '' class="eight-btn btn">
               <span>8</span>
-            </div>
+            </div></a>
           </div>
           <div class="fourfive">
-            <div class="four-btn btn">
+            <a href="#" onclick="four();"><div id = '' class="four-btn btn">
               <span>4</span>
-            </div>
-            <div class="five-btn btn">
+            </div></a>
+            <a href="#" onclick="five();"><div id = '' class="five-btn btn">
               <span>5</span>
-            </div>
+            </div></a>
           </div>
           <div class="onetwo">
-            <div class="one-btn btn">
+            <a href="#" onclick="one()"><div id = '' class="one-btn btn">
               <span>1</span>
-            </div>
-            <div class="two-btn btn">
+            </div></a>
+            <a href="#" onclick="two();"><div id = '' class="two-btn btn">
               <span>2</span>
-            </div>
+            </div></a>
           </div>
-          <div class="zero-btn btn">  
+          <a href="#" onclick="zero();"><div id = '' class="zero-btn btn">  
             <span>0</span>
-          </div>
+          </div></a>
         </div>
         <div class="right-two-rows">
           <div class="right-row-one">
-            <div class="nine-btn btn">  
+            <a href="#" onclick="nine();"><div id = '' class="nine-btn btn">  
               <span>9</span>
-            </div>
-            <div class="six-btn btn">
+            </div></a>
+            <a href="#" onclick="six();"><div id = '' class="six-btn btn">
               <span>6</span>
-            </div>
-            <div class="three-btn btn">
+            </div></a>
+            <a href="#" onclick="three();"><div id = '' class="three-btn btn">
               <span>3</span>
-            </div>
-            <div class="decimal-btn btn">
+            </div></a>
+            <a href="#" onclick=""><div id = '' class="decimal-btn btn">
               <span>.</span>
-            </div>
+            </div></a>
           </div>
-          <div class="right-row-two">
-            <div class="minus-btn btn">   
+          <a href="#" onclick=""><div class="right-row-two">
+            <div id = '' class="minus-btn btn">   
               <span>-</span>
-            </div>
-            <div class="plus-btn btn">
+            </div></a>
+            <a href="#" onclick=""><div id = '' class="plus-btn btn">
               <span>+</span>
-            </div>
-            <div class="equal-btn btn">
+            </div></a>
+            <a href="#" onclick=""><div id = '' class="equal-btn btn">
               <span>=</span>
-            </div>
+            </div></a>
           </div>
 
 
@@ -111,8 +111,14 @@
     </div>
   </div>
 </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
   
-  
+
+    <script  src="js/index.js"></script>
+
+
+
 
 </body>
 
