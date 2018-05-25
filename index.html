@@ -23,7 +23,7 @@
         <span>JavaScript Calculator</span>
       </div>
       <div class="calc-screen">
-        <div class="current-input">
+        <div id='currentInput' class="current-input">
         </div>
         <div id='display' class="all-input">
         </div>
@@ -35,7 +35,7 @@
         <a href="#" onclick="allClear();"><div class="ac-btn btn">
           <span>AC</span>
           </div></a>
-        <a href="#" onclick="clear();"><div id = 'ce' class="ce-btn btn">
+        <a href="#" onclick="clearInput();"><div id = 'ce' class="ce-btn btn">
           <span>CE</span>
         </div></a>
         <a href="#" onclick="divide();"><div id = ''class="div-btn btn">
@@ -88,18 +88,18 @@
             <a href="#" onclick="three();"><div id = '' class="three-btn btn">
               <span>3</span>
             </div></a>
-            <a href="#" onclick=""><div id = '' class="decimal-btn btn">
+            <a href="#" onclick="decimal();"><div id = '' class="decimal-btn btn">
               <span>.</span>
             </div></a>
           </div>
-          <a href="#" onclick=""><div class="right-row-two">
-            <div id = '' class="minus-btn btn">   
+          <div class="right-row-two">
+            <a href="#" onclick="minus();"><div id = '' class="minus-btn btn">   
               <span>-</span>
             </div></a>
-            <a href="#" onclick=""><div id = '' class="plus-btn btn">
+            <a href="#" onclick="plus();"><div id = '' class="plus-btn btn">
               <span>+</span>
             </div></a>
-            <a href="#" onclick=""><div id = '' class="equal-btn btn">
+            <a href="#" onclick="equals();"><div id = '' class="equal-btn btn">
               <span>=</span>
             </div></a>
           </div>
