@@ -22,7 +22,7 @@ function joinFullDisplay(arr){
 
 function updateFullDisplay(arr){
  
-  $('#display').html('<span>'+arr.join('')+fullDisplay.length+'</span>');
+  $('#display').html('<span>'+arr.join('')+'</span>');
   
 }
 
@@ -93,6 +93,7 @@ function nextInput(){
   track++;
 }
 
+
 function plus(){
   
   window.display.push('+');
@@ -120,13 +121,53 @@ function multiply(){
   nextInput();
 }
 function equals(){
-  window.display.push('=');
+  window.track++;
+  window.display.push('='+calculate(window.fullDisplay));
   joinFullDisplay(window.display);
-  nextInput();
+  clearInput();
+  window.track=0;
 }
 
-function calculate(){
+function calculate(arr){
   
+  if(window.track==0){
+    return window.display.join('');
+  }
+  
+  if(window.track>0){
+    window.result=arr.join('')+window.display.join('');
+    var numArr = window.result;
+    var num = 0; 
+    num += eval(numArr[0]);
+    
+    //Beginning of for loop
+    for(var i=1; i<numArr.length;i++){ 
+        switch (numArr[i]){
+          case '+':
+            num+=eval(numArr[i+1]);
+            i++;
+            break;
+          case '-':
+            num-=eval(numArr[i+1]);
+            i++;
+            break;
+          case '/':
+            num/=eval(numArr[i+1]);
+            i++;
+            break;
+          case '*':
+            num*=eval(numArr[i+1]);
+            i++;
+            break;
+        }
+
+      }
+    //End of For Loop*/
+    
+    }
+    
+    return num ;
+      
   
   
 }
