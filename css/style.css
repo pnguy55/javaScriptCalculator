@@ -1,8 +1,9 @@
 body, .wrapper{
-  background-color: gray;
+  background-color: white;
   height: 100%;
   width: 100%;
   color: white;
+  background-color: grey;
   
 }
 
@@ -19,42 +20,70 @@ body, .wrapper{
   justify-content:center;
   align-items: center;
   margin-top: 5em;
-  background-color: black;
+  background-color: ghostwhite;
   border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 19em;
+  min-width: 19em;
+  max-height: 31em;
+  min-height: 31em;
+}
+
+.calc-wrapper, a{
+  text-decoration: none;
+  color: ghostwhite;
+  font-weight: 600;
 }
 /*Start of Calc Head*/
 .calc-head-wrap{
   display: flex;
   flex-direction: column;
   padding: .5em;
+  width: 100%;
+  
 }
 
 .calc-title{
-  padding: .2em 5.7em;
-  color: white;
+  padding-bottom: 2em;
+  color: black;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  
 }
 .calc-screen{
   padding: .1em;
-  background-color: red;
+  background-color: grey;
+  width: 98%;
+  
 }
-
 .current-input{
-  padding: 1.5em 10em;
-  background-color: purple;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 2.5em;
 
+}
 .all-input{
-  padding: .8em 10em;
-  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 2.5em;
+  
+  
 }
 
 /*End of Calc Head*/
 
 .btn{
-  padding: 1em;
+  padding: 1.2em;
   margin-bottom: 1em;
   background-color: gray;
-  border-radius: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .top-btns{
@@ -63,6 +92,17 @@ body, .wrapper{
   align-items: center;
   margin-top: 1em;
   width:90%;
+}
+
+.ac-btn, .ce-btn {
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  padding-left: .75em;
+  padding-right: .75em;
+  margin-bottom: 1em;
+  background-color: gray;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .other-btns{
@@ -95,29 +135,46 @@ body, .wrapper{
   display: flex;
   width: 50%;
   justify-content: space-around;
+  height: 80%;
 }
 
-.right-row-one{
+.right-column-one{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4em;
+  
+  
+}
+.right-column-two{
   display: flex;
   flex-direction: column;
   height: 100%;
   
-}
-.right-row-two{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
   
 }
 
 .equal-btn{
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3.45em;
+  padding-bottom: 3.45em;
 }
 
 .zero-btn{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: .6em;
-  width: 50%;
+  margin-left: 1em;
+  width: 54%;
+}
+
+.credit-wrap{
+  width: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.credit{
+  
 }

@@ -1,7 +1,8 @@
 var display=[];
 var fullDisplay=[];
 var result=0;
-var track = 0;
+var track = 0; 
+var opLock=0;
 
 
 function joinCurrentInput(){
@@ -29,51 +30,70 @@ function updateFullDisplay(arr){
 function one(){
   window.display.push(1);
   joinCurrentInput();
+  window.opLock=0;
 }
 
 function two(){
   window.display.push(2);
   joinCurrentInput();
+  window.opLock=0;
 }
 
 function three(){
   window.display.push(3);
   joinCurrentInput();
+  window.opLock=0;
 }
 
 function four(){
   window.display.push(4);
   joinCurrentInput();
+  window.opLock=0;
 }
 
 function five(){
   window.display.push(5);
   joinCurrentInput();
+  window.opLock=0;
 }
 
 function six(){
   window.display.push(6);
   joinCurrentInput();
+  window.opLock=0;
 }
 
 function seven(){
   window.display.push(7);
   joinCurrentInput();
+  window.opLock=0;
 }
 
 function eight(){
   window.display.push(8);
   joinCurrentInput();
+  window.opLock=0;
 }
 
 function nine(){
   window.display.push(9);
   joinCurrentInput();
+  window.opLock=0;
 }
 
 function zero(){
   window.display.push(0);
   joinCurrentInput();
+  window.opLock=0;
+}
+
+function decimal(){
+  if(opLock==0){
+    window.display.push('.');
+    joinCurrentInput();
+}
+  
+  window.opLock=1;  
 }
 
 function allClear(){
@@ -96,36 +116,56 @@ function nextInput(){
 
 function plus(){
   
-  window.display.push('+');
-  joinFullDisplay(window.display);
-  nextInput();
+  if(opLock==0){
+    window.display.push(' + ');
+    joinFullDisplay(window.display);
+    nextInput();
+  }
+  
+  window.opLock=1;
   
   
 }
 
 function minus(){
-  window.display.push('-');
-  joinFullDisplay(window.display);
-  nextInput();
+  if(opLock==0){
+    window.display.push(' - ');
+    joinFullDisplay(window.display);
+    nextInput();
+  }
+  
+  window.opLock=1;  
 }
 
 function divide(){
-  window.display.push('/');
-  joinFullDisplay(window.display);
-  nextInput();
+  if(opLock==0){
+    window.display.push(' / ');
+    joinFullDisplay(window.display);
+    nextInput();
+  }
+  
+  window.opLock=1;
 }
 
 function multiply(){
-  window.display.push('*');
-  joinFullDisplay(window.display);
-  nextInput();
+  if(opLock==0){
+    window.display.push(' * ');
+    joinFullDisplay(window.display);
+    nextInput();
+  }
+  
+  window.opLock=1;
 }
 function equals(){
-  window.track++;
-  window.display.push('='+calculate(window.fullDisplay));
-  joinFullDisplay(window.display);
-  clearInput();
-  window.track=0;
+  if(opLock==0){
+    window.track++;
+    window.display.push(' = '+calculate(window.fullDisplay));
+    joinFullDisplay(window.display);
+    clearInput();
+    window.track=0;
+  }
+  
+  window.opLock=1;
 }
 
 function calculate(arr){
@@ -136,7 +176,8 @@ function calculate(arr){
   
   if(window.track>0){
     window.result=arr.join('')+window.display.join('');
-    var numArr = window.result;
+    var numArr = window.result.split(' ');
+    
     var num = 0; 
     num += eval(numArr[0]);
     
@@ -166,7 +207,7 @@ function calculate(arr){
     
     }
     
-    return num ;
+    return num;
       
   
   
